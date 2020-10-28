@@ -1,0 +1,13 @@
+<!--pages/change/change.wxml-->
+<!-- 语言列表页 -->
+<view class="container lang-list">
+  <view class="title">翻译成</view>
+
+  <!-- 每项语言 -->
+  <view class="item" data-chs="{{language.chs}}" data-lang="{{language.lang}}" data-index="{{index}}" wx:for="{{langList}}" wx:key="index" wx:for-item="language" bindtap="onTapItem" hover-class="view-hover">
+    <view class="item-inner">
+      <text class="txt">{{language.chs}}</text>
+      <text class="iconfont icon-duihao" wx:if="{{index === curLang.index}}"></text>
+    </view>
+  </view>
+</view>
